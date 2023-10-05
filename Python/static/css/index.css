@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif, monospace;
+}
+p{
+    font-size: 20px;
+}
+#carrusel{
+    float: right;
+    margin-top: 120px;
+    margin-right: 70px;
+}
+body{
+    background-image: url("../img/fondo1.png");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+li{
+    padding-bottom: 60px;
+    font-size: 30px;
+    color: white;
+    width: 250px;
+}
+a{
+    color: white;
+}
+ul{
+    margin-top: 50px;
+}
+
+/*-----------------------Index------------------*/
+@media(min-width:700px){
+    #opciones{
+        position: absolute;
+    }
+}
+
+@media (max-width: 699px){
+    #opciones{
+        margin-left: 20%;
+        margin-top: 400px;
+
+    }
+}
+
+/*-----------------------Fin Index------------------*/
+
+.blanco{
+    color: white;
+}
+.negro{
+    color: black;
+}
+
+/*-----------------Reparaciones-----------------*/
+
+
+
+/*-----------------Fin Reparaciones-----------------*/
+
+/*-----------------Especificaciones-----------------*/
+
+@media(max-width: 700px){
+    .cont1{
+        width: 400px;
+        height: 500px;
+        margin: 20px 20px;
+        padding: 20px 20px;
+        text-align: justify;
+        background: rgba(255, 255, 255, .2);
+        color: white;
+        border-radius: 10px;
+    }
+}
+@media(max-width: 1000px){
+    .cont1{
+        width: 400px;
+        height: 500px;
+        margin: 20px 20px;
+        padding: 20px 20px;
+        text-align: justify;
+        background: rgba(255, 255, 255, .2);
+        color: white;
+        border-radius: 10px;
+    }
+}
+
+@media(min-width: 1001px){
+    .cont1{
+        width: 400px;
+        margin: 20px 20px;
+        padding: 20px 20px;
+        text-align: justify;
+        background: rgba(255, 255, 255, .2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        border-radius: 10px;
+    }
+    .divisor1{
+        color: white;
+        display: flex;
+        justify-content: center;
+
+    }
+    
+    .divisor1 h1 {
+        text-align: center;
+        padding: 20px 20px;
+    }
+}
+
+/*-----------------Fin Especificaciones-----------------*/
+
+
+
+/*-----------------Comentarios-----------------*/
+@media (max-width: 1200px){
+    .subir{
+        margin-left: 5%;
+        width: 400px;
+        
+    }
+    #comentario{
+        width: 200px;
+    }
+    .comentarios{
+        margin-left: 5%;
+        width: 400px;
+    }
+}
+#tabla-comentarios{
+    margin-left: 30px;
+}
+#titulo-comentarios{
+    margin: 20px;
+}
+.imagen-comentarios{
+    width: 320px;
+}
+@media (min-width: 1201px){
+    .subir{
+        margin-top: 45px;
+        margin-right: 10px;
+        border-radius: 10px;
+        background-color: rgb(189, 189, 189);
+        float: right;
+    }
+    .comentarios{
+        border-radius: 10px;
+        margin: 50px;
+        width: 400px;
+        float: left;    
+        background-color: rgb(189, 189, 189);
+    }
+}
+.subir{
+    background-color: rgb(189, 189, 189);
+}
+.comentarios{
+    background-color: rgb(189, 189, 189);
+}
+.regresar{
+    margin: 20px;
+    font-size: 20px;
+    color: black;
+}
+.derecha-comentarios{
+    margin:20px;
+}
+#boton-comentarios{
+    margin: 20px;
+    border-radius: 50%;
+}
+.carrousel{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carrousel{
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: rgb(103, 102, 102);
+}
+
+.itemCarrouselArrows > a > i{
+    color: rgb(101, 101, 101);
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*-----------------Fin Comentarios-----------------*/
+
+/*-----------------Software-----------------*/
+
+
+
+/*-----------------Fin Software-----------------*/

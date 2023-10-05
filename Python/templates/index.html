@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/index.css')}}">
+    <script src="https://kit.fontawesome.com/887a835504.js" crossorigin="anonymous"></script>
+    <title>Principal</title>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <h1><a style="font-size: 50px;" class="navbar-brand" href="#">MacBook Air
+        </a></h1>
+        <a class="navbar-brand" href="#">
+        </a>
+        <a class="navbar-brand" href="#">
+        </a>
+        <a class="navbar-brand" href="#">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <div class="carrousel" id="carrusel">
+      <div class="conteCarrousel">
+          <div class="itemCarrousel" id="itemCarrousel-1">
+              <div class="itemCarrouselTarjeta">
+                <img src="/static/img/imagen-1.jpg" alt="">
+              </div>
+              <div class="itemCarrouselArrows">
+                  <a href="#itemCarrousel-3">
+                      <i class="fas fa-chevron-left"></i>
+                  </a>
+                  <a href="#itemCarrousel-2">
+                      <i class="fas fa-chevron-right"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="itemCarrousel" id="itemCarrousel-2">
+              <div class="itemCarrouselTarjeta">
+                <img src="/static/img/imagen-2.jpg" alt="">
+              </div>
+              <div class="itemCarrouselArrows">
+                  <a href="#itemCarrousel-1">
+                      <i class="fas fa-chevron-left"></i>
+                  </a>
+                  <a href="#itemCarrousel-3">
+                      <i class="fas fa-chevron-right"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="itemCarrousel" id="itemCarrousel-3">
+              <div class="itemCarrouselTarjeta">
+                <img src="/static/img/imagen-3.jpg" alt="">
+              </div>
+              <div class="itemCarrouselArrows">
+                  <a href="#itemCarrousel-2">
+                      <i class="fas fa-chevron-left"></i>
+                  </a>
+                  <a href="#itemCarrousel-1">
+                      <i class="fas fa-chevron-right"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="conteCarrouselController">
+          <a href="#itemCarrousel-1">•</a>
+          <a href="#itemCarrousel-2">•</a>
+          <a href="#itemCarrousel-3">•</a>
+      </div>
+  </div>
+
+
+
+    <ul id="opciones">
+      
+      <li><a href="/especificaciones">Especificaciones</a></li>
+      
+      <li><a href="/software">Software</a></li>
+      
+      <li><a href="/reparaciones">Reparación</a></li>
+      
+      <li><a href="{{ url_for('listar_publicaciones') }}">Comentarios</a></li>
+      
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

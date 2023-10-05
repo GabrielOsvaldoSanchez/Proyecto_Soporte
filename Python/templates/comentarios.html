@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/index.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/">Volver
+        </a>
+        <h1><a style="font-size: 50px;" class="navbar-brand" href="#">Comentarios
+        </a></h1>
+        <a class="navbar-brand" href="#">
+        </a>
+        <a class="navbar-brand" href="#">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-auto" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+        </div>
+      </nav>
+    <div class="subir">
+        <h1 id="titulo-comentarios" class="negro">Subir Contenido</h1>
+        <form id="boton-comentarios" action="/upload" method="POST" enctype="multipart/form-data">
+
+            <table id="tabla-comentarios">
+                <tbody>
+                    <tr>
+                        <th style="text-align: left;"><label id="label-comentarios" for="comentario">Comentario: <br><textarea name="comentario" id="comentario" rows="4" cols="50"></textarea></label></th>
+                    </tr>
+                <tbody>
+            </table>
+            <br>
+            <label class="derecha-comentarios" for="archivo">Archivo (imagen, video o audio):</label>
+            <input type="file" name="archivo" accept="image/*, video/*, audio/*">
+            <br>
+            <input type="submit" value="Subir">
+        </form>
+    </div>
+    
+    <div class="comentarios">
+        <h1>Contenido Subido</h1>
+        <ul>
+            {% for item in items[::-1] %}
+                <li class="negro">
+                    <p>{{ item[1] }}</p> <!-- Comentario -->
+                    {% if item[2] %}
+                        {% if item[3].startswith('image') %}
+                            <img class="imagen-comentarios" src="{{ url_for('get_media', item_id=item[0]) }}" alt="Imagen">
+                        {% elif item[3].startswith('video') %}
+                            <video controls>
+                                <source src="{{ url_for('get_media', item_id=item[0]) }}" type="{{ item[3] }}">
+                                Tu navegador no soporta la reproducción de video.
+                            </video>
+                        {% elif item[3].startswith('audio') %}
+                            <audio controls>
+                                <source src="{{ url_for('get_media', item_id=item[0]) }}" type="{{ item[3] }}">
+                                Tu navegador no soporta la reproducción de audio.
+                            </audio>
+                        {% else %}
+                            <a href="{{ url_for('get_media', item_id=item[0]) }}" download>Descargar Archivo</a>
+                        {% endif %}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    </body>
